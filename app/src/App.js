@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom'
+import Home from './views/Home'
+import About from './views/About'
+import Landing from './views/Landing';
+import { Grommet, Header, Text } from 'grommet';
 
+const theme = {
+  global: {
+    font: {
+      family: "Roboto",
+      size: "18px",
+      height: "20px",
+    },
+  },
+};
+const AppBar = (props) => (
+   <Header
+     background="brand"
+     pad={{ left: "medium", right: "small", vertical: "small" }}
+     elevation="medium"
+     {...props}
+   />
+  );
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grommet full theme={theme}>
+       <AppBar>
+        <Text size="large">My App</Text>
+       </AppBar>
+       <Routes>
+          <Route path="/" element={<Landing/>}/>
+          <Route path="home" element={<Home/>}/>
+          <Route path="about" element={<About/>}/>
+       </Routes>
+    </Grommet>
   );
 }
 
