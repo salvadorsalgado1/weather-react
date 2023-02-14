@@ -1,25 +1,25 @@
-import { Box, Grid } from 'grommet'
+import { Box, Grid, Button, RoutedAnchor,Text, Paragraph } from 'grommet'
 import { Link } from 'react-router-dom'
 
+const styles = {
+    justifyContent:'end',
+    height:'100%'
+}
+ 
 const Landing = () =>{
     return(
-        <div>
-            <h1>Landing</h1>
-            <Grid
-            
-            rows={['xsmall', 'xsmall', 'xsmall']}
-            columns={['xsmall', 'xsmall', 'xsmall']}
-            gap="xsmall"
-            areas={[
-                { name: 'header', start: [1, 1], end: [1, 1] },
-                { name: 'nav', start: [2, 0], end: [2, 1] },
-                { name: 'main', start: [1, 1], end: [1, 1] },
-            ]}>
-  <Box gridArea="header" background="brand" />
-  <Box gridArea="nav" background="light-5" />
-  <Box gridArea="main" background="light-2" />
-</Grid>
-            <Link to="/home">Go to homepage</Link>
+        <div className="landing" style={styles}> 
+            <h1>Welcome!</h1> 
+            <Paragraph>
+                Welcome to the Weather App. This is a practice React application 
+                to gain and develop new skills. 
+            </Paragraph>
+            <Paragraph>
+                Let's get started!
+            </Paragraph>
+            <div class="right-align"> 
+            <Link to="/home"><Button tag="span" primary label="Start"/></Link>
+            </div>
         </div>
     )
 }

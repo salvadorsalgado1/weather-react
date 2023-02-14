@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './views/Home'
 import About from './views/About'
 import Landing from './views/Landing';
-import { Grommet, Header, Text } from 'grommet';
+import { Box, Grommet, Header, Page, PageContent, Text } from 'grommet';
+import Container from './components/Container';
 
 const theme = {
   global: {
@@ -14,6 +15,7 @@ const theme = {
     },
   },
 };
+
 const AppBar = (props) => (
    <Header
      background="brand"
@@ -25,14 +27,16 @@ const AppBar = (props) => (
 function App() {
   return (
     <Grommet full theme={theme}>
-       <AppBar>
+       <AppBar className="app-bar">
         <Text size="large">My App</Text>
        </AppBar>
-       <Routes>
+        <Container>
+        <Routes>
           <Route path="/" element={<Landing/>}/>
           <Route path="home" element={<Home/>}/>
           <Route path="about" element={<About/>}/>
        </Routes>
+         </Container>
     </Grommet>
   );
 }
