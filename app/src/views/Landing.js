@@ -1,4 +1,4 @@
-import { Box, Grid, Button, RoutedAnchor,Text, Paragraph } from 'grommet'
+import { Button, Paragraph } from 'grommet'
 import { Link } from 'react-router-dom'
 
 const styles = {
@@ -17,7 +17,7 @@ const Landing = () =>{
             <Paragraph>
                 Let's get started!
             </Paragraph>
-            <div class="right-align"> 
+            <div className="right-align"> 
             <Link to="/home"><Button tag="span" primary label="Start"/></Link>
             </div>
         </div>

@@ -1,9 +1,9 @@
- import { Card, CardBody, CardHeader } from "grommet"
+ import { Card, CardBody } from "grommet"
   const PrimaryWeatherCard = (props)=>{
     return(
-        <Card height="small" width="small" background="light-1">
-            <CardHeader pad="medium">Header</CardHeader>
-            <CardBody pad="medium"> 
+        <Card width="small" background="light-1">
+        {/* <Card height="small" width="medium" background="light-1"> */}
+             <CardBody pad="medium"> 
                 {props.children}
             </CardBody>
         </Card> 

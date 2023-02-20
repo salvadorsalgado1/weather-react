@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './views/Home'
 import About from './views/About'
 import Landing from './views/Landing';
-import { Box, Grommet, Header, Page, PageContent, Text } from 'grommet';
+import Forecast from './views/Forecast';
+import {Grommet, Header, Text } from 'grommet';
 import Container from './components/Container';
 
 const theme = {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Landing/>}/>
           <Route path="home" element={<Home/>}/>
           <Route path="about" element={<About/>}/>
+          <Route path="forecast" element={<Forecast/>}/>
        </Routes>
          </Container>
     </Grommet>

@@ -13,7 +13,7 @@ const DayOfWeek = ()=>{
 
 const Greeting = () =>{
     return(
-        <div>
+        <div align="center">
              <DayOfWeek/>
         </div>
     )
